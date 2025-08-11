@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Music Player</title>
+    <title>Music Player</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -53,8 +53,8 @@
                 <div class="song-info">
                     <img id="current-song-img" src="assets/default-song.png" alt="Album Art">
                     <div>
-                        <div id="current-song-title">No song selected</div>
-                        <div id="current-song-artist">-</div>
+                        <div id="current-song-title">Kebh Kebhi</div>
+                        <div id="current-song-artist">AUR</div>
                     </div>
                 </div>
                 
@@ -91,7 +91,7 @@
     </div>
 
     <!-- Add Song Modal -->
-    <div id="add-song-modal" class="modal">
+     <div id="add-song-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <h2>Add New Song</h2>
@@ -113,18 +113,39 @@
                         <option value="classical">Classical</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="song-file">Audio File</label>
-                    <input type="file" id="song-file" accept="audio/*" required>
+                
+                <div class="add-method-tabs">
+                    <button type="button" class="tab-btn active" data-tab="local-tab">Local Files</button>
+                    <button type="button" class="tab-btn" data-tab="web-tab">Web URLs</button>
                 </div>
-                <div class="form-group">
-                    <label for="song-image">Image File</label>
-                    <input type="file" id="song-image" accept="image/*">
+                
+                <div id="local-tab" class="tab-content active">
+                    <div class="form-group">
+                        <label for="song-file">Audio File</label>
+                        <input type="file" id="song-file" accept="audio/*">
+                    </div>
+                    <div class="form-group">
+                        <label for="song-image">Image File</label>
+                        <input type="file" id="song-image" accept="image/*">
+                    </div>
                 </div>
+                
+                <div id="web-tab" class="tab-content">
+                    <div class="form-group">
+                        <label for="song-url">Audio URL</label>
+                        <input type="url" id="song-url" placeholder="https://example.com/song.mp3">
+                    </div>
+                    <div class="form-group">
+                        <label for="image-url">Image URL</label>
+                        <input type="url" id="image-url" placeholder="https://example.com/image.jpg">
+                    </div>
+                </div>
+                
                 <button type="submit" class="submit-btn">Add Song</button>
             </form>
         </div>
     </div>
+
 
     <script src="script.js"></script>
 </body>
