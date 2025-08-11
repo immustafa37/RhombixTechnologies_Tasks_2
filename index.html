@@ -43,13 +43,19 @@
                         <button id="add-song-btn"><i class="fas fa-plus"></i></button>
                     </div>
                     <ul id="playlist-songs"></ul>
+                    
+                    <div class="local-files">
+                        <h4>Add Local Files</h4>
+                        <input type="file" id="local-song" accept="audio/*">
+                        <button id="add-local-song"><i class="fas fa-upload"></i> Add</button>
+                    </div>
                 </div>
             </aside>
 
             <main class="music-content">
                 <div class="current-song">
                     <div class="song-info">
-                        <img id="current-song-img" src="https://via.placeholder.com/150" alt="Album Art">
+                        <img id="current-song-img" src="images/default-cover.jpg" alt="Album Art">
                         <div>
                             <h2 id="current-song-title">No song selected</h2>
                             <p id="current-song-artist">Select a song to play</p>
