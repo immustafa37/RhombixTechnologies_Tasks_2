@@ -16,6 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
             category: "rock",
             url: "assets/songs/default-song-2.mp3",
             img: "assets/images/default-song-2.jpg"
+        },
+        {
+            id: 3,
+            title: "Dil Sulagane Laga",
+            artist: "Nusrat Fateh Ali Khan",
+            category: "classical",
+            url: "assets/songs/default-song-3.mp3",
+            img: "assets/images/default-song-3.jpg"
         }
     ];
 
